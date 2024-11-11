@@ -8,9 +8,12 @@ const {
   deleteuser
 } = require("../controllers/userControllers.js");
 
+const auth = require("../middleware/auth.js");
 
 // GET /users
 router.get("/", getAllusers);
+
+router.use(auth);
 
 // POST /users
 router.post("/", createuser);
