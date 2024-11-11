@@ -1,4 +1,4 @@
-const Tour = require("./tourLib.js");
+const Tour = require("../models/tourModel.js");
 
 const getAllTours = (req, res) => {
   res.json(Tour.getAll());
